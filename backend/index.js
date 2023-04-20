@@ -16,6 +16,10 @@ app.use(cors());
 app.use("/foods", foodRoutes);
 // app.use("/user", userRouter);
 
+app.get("/", (req, res) => {
+  res.send("hello reached");
+});
+
 const CONNECTION_URL =
   "mongodb+srv://prashant123:prashant1234@cluster0.otmjbkr.mongodb.net/?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
